@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pickup
+  - Pen
+  - FancyPen
+  - Stapler
+  - Mug
+  - Printer
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,12 @@ public class MouseLook : MonoBehaviour
 {
     float mouseSensitivity = 100f;
     public Transform playerBody;
-    public float xRotation = 0f;
+    float xRotation = 0f;
+    public int stapler;
+    public int printer;
+    public int pen;
+    public int fancyPen;
+    public int mug;
 
     void Update() {
         RaycastHit hit;
@@ -16,8 +21,24 @@ public class MouseLook : MonoBehaviour
             print("hit");
             if(Input.GetButtonDown("Fire1")){
                 print("fire");
-                if(hit.transform.gameObject.tag == ("Pickup")){
-                    print("destroy");
+                if(hit.transform.gameObject.tag == ("Pen")){
+                    pen ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Printer")){
+                    printer ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Stapler")){
+                    stapler ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("FancyPen")){
+                    fancyPen ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Mug")){
+                    mug ++;
                     Destroy(hit.transform.gameObject);
                 }
             }
