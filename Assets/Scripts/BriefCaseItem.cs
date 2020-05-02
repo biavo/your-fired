@@ -10,7 +10,7 @@ public class BriefCaseItem : MonoBehaviour
     public bool inBriefCase = false;
 
     public Material ogMat;
-    public Material goodMat;
+    //public Material goodMat;
     public Material badMat;
 
     void Start()

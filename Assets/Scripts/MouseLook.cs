@@ -44,14 +44,15 @@ public class MouseLook : MonoBehaviour
                 {
                     Destroy(hit.transform.gameObject);
                     Vector3 spawnPos;
-                    var a = Random.Range(1, 2);
+                    var a = Random.Range(1, 3);
+                    //Debug.Log(a);
                     if(a == 1)
                     {
-                        spawnPos = new Vector3(spawnPos1.position.x + Random.Range(-2.0f, 2f), spawnPos1.position.y, spawnPos1.position.z + Random.Range(-2f, 2f));
+                        spawnPos = new Vector3(spawnPos1.position.x + Random.Range(-1.5f, 1.5f), spawnPos1.position.y, spawnPos1.position.z + Random.Range(-1.5f, 1.5f));
                     }
                     else
                     {
-                        spawnPos = new Vector3(spawnPos2.position.x + Random.Range(-2.0f, 2f), spawnPos2.position.y, spawnPos2.position.z + Random.Range(-2f, 2f));
+                        spawnPos = new Vector3(spawnPos2.position.x + Random.Range(-1.5f, 1.5f), spawnPos2.position.y, spawnPos2.position.z + Random.Range(-1.5f, 1.5f));
                     }
                     //Vector3 spawnPos = ItemParent.position;
                     var o = Instantiate(Resources.Load<GameObject>(hit.transform.gameObject.tag + "Inv"), spawnPos, Quaternion.identity, ItemParent);

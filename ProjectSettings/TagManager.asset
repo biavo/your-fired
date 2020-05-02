@@ -15,6 +15,7 @@ TagManager:
   - Computer
   - Laptop
   - Lamp
+  - Clock
   layers:
   - Default
   - TransparentFX
