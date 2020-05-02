@@ -11,6 +11,7 @@ public class ButtonScript : MonoBehaviour
     public GameObject StartMenu;
     public GameObject PauseMenu;
     public GameObject GameUI;
+    public GameObject Crosshair;
     public GameObject EndScreen;
 
     public GameObject InstructionsScreen1;
@@ -23,6 +24,9 @@ public class ButtonScript : MonoBehaviour
     bool paused = false;
 
     private static ButtonScript scriptInstance;
+
+    public TextMeshProUGUI scoreText;
+
     void Awake()
     {
         //https://answers.unity.com/questions/982403/how-to-not-duplicate-game-objects-on-dontdestroyon.html
@@ -110,15 +114,28 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("Office1");
         InstructionsScreen2.SetActive(false);
         GameUI.SetActive(true);
+        Crosshair.SetActive(true);
+        timer = 120;
         timerStarted = true;
     }
 
     public void EndGame()
     {
         //write score text?
+        var g = GameObject.Find("PointsArea");
+        if(g.GetComponent<pointTally>())
+        {
+            scoreText.text = "SCORE $" + g.GetComponent<pointTally>().pointsTotal;
+        }
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         GameUI.SetActive(false);
+        Crosshair.SetActive(false);
         PauseMenu.SetActive(false);
         EndScreen.SetActive(true);
+        paused = false;
     }
 
     public void QuitToMenu()

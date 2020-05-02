@@ -8,7 +8,7 @@ public class pointTally : MonoBehaviour
     public TextMeshPro scoreText;
     public List<GameObject> items = new List<GameObject>();
 
-    int pointsTotal = 0;
+    public int pointsTotal = 0;
 
 
     void OnTriggerEnter(Collider other)
