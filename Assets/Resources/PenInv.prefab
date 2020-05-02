@@ -153,8 +153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 10
   validPlacement: 1
+  inBriefCase: 0
+  ogMat: {fileID: 0}
   goodMat: {fileID: 0}
-  badMat: {fileID: 0}
+  badMat: {fileID: 2100000, guid: b83a74760fb336d4a9a538395352fd42, type: 2}
 --- !u!1 &6175588130709482774
 GameObject:
   m_ObjectHideFlags: 0

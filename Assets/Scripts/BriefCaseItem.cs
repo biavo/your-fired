@@ -9,14 +9,21 @@ public class BriefCaseItem : MonoBehaviour
     public bool validPlacement = true;
     public bool inBriefCase = false;
 
+    public Material ogMat;
     public Material goodMat;
     public Material badMat;
+
+    void Start()
+    {
+        ogMat = GetComponent<Renderer>().material;
+    }
 
     void OnCollisionStay(Collision collision)
     {
         if(collision.transform.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem"))
         {
             validPlacement = false;
+            GetComponent<Renderer>().material = badMat;
         }
     }
 
@@ -25,6 +32,7 @@ public class BriefCaseItem : MonoBehaviour
         if (collision.transform.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem"))
         {
             validPlacement = true;
+            GetComponent<Renderer>().material = ogMat;
         }
     }
 }

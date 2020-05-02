@@ -139,8 +139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 80
   validPlacement: 1
+  inBriefCase: 0
+  ogMat: {fileID: 0}
   goodMat: {fileID: 0}
-  badMat: {fileID: 0}
+  badMat: {fileID: 2100000, guid: b83a74760fb336d4a9a538395352fd42, type: 2}
 --- !u!54 &1637962357305292616
 Rigidbody:
   m_ObjectHideFlags: 0
