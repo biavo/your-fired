@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 isMorph = true;
-                transform.localScale = new Vector3(1, 0.5f, 1);
+                transform.localScale = new Vector3(1, 0.4f, 1);
             }
         }
         //checking if physics checks are active or not
