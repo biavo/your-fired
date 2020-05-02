@@ -67,6 +67,15 @@ public class ItemMovement : MonoBehaviour
             }
         }
 
+        if(Input.GetMouseButtonDown(1) && selectedItem)
+        {
+            scoreArea.items.Remove(selectedItem);
+            Destroy(selectedItem);
+            selectedItem = null;
+            
+            scoreArea.calculateScore();
+        }
+
         
 
         if(Input.GetMouseButtonUp(0) && selectedItem)

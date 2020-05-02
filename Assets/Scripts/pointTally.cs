@@ -42,7 +42,16 @@ public class pointTally : MonoBehaviour
         //do the score algorithm here... tally all points together, deduct for repeat items, and write score to canvas.
         foreach(var i in items)
         {
-            pointsTotal += i.GetComponentInChildren<BriefCaseItem>().pointValue;
+            //if(!i)
+            //{
+            //    items.Remove(i);
+            //    //brea ;
+            //}
+            if(i.GetComponentInChildren<BriefCaseItem>().validPlacement)
+            {
+                pointsTotal += i.GetComponentInChildren<BriefCaseItem>().pointValue;
+            }
+            
         }
         scoreText.text = "$" + pointsTotal;
     }
