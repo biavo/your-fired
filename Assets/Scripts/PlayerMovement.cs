@@ -43,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
         isMorph = false;
     }
 
+    void Start()
+    {
+        crosshair = GameObject.Find("Crosshair");
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && isGrounded)
@@ -61,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
 
+                //GameObject.Find("Crosshair").SetActive(false);
                 crosshair.SetActive(false);
             }
         }
@@ -83,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        //GameObject.Find("Crosshair").SetActive(true);
         crosshair.SetActive(true);
 
         yield return null;
