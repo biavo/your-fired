@@ -76,9 +76,13 @@ public class ItemMovement : MonoBehaviour
                 selectedItem.transform.position = startPos;
                 selectedItem.transform.eulerAngles = startRot;
             }
+            else
+            {
+                scoreArea.calculateScore();
+            }
             
             selectedItem = null;
-            scoreArea.calculateScore();
+            
         }
     }
 }

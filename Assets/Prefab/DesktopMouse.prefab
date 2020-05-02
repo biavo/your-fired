@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 960678543313985642}
   - component: {fileID: 960678543312855722}
   - component: {fileID: 65643399649943236}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DesktopMouse
   m_TagString: Mouse
   m_Icon: {fileID: 0}

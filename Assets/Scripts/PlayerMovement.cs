@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     GameObject mainCamera;
     bool isMorph;
 
+    public GameObject BriefCase;
+    public GameObject crosshair;
+    bool usingbriefCase = false;
 
 
     void Awake(){
@@ -41,24 +44,65 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Crouch")){
-            if(isMorph){
-                if(!isRoof){
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(usingbriefCase)
+            {
+                usingbriefCase = false;
+                mainCamera.SetActive(true);
+                BriefCase.SetActive(false);
+
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+                crosshair.SetActive(true);
+            }
+            else
+            {
+                usingbriefCase = true;
+                mainCamera.SetActive(false);
+                BriefCase.SetActive(true);
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                crosshair.SetActive(false);
+            }
+        }
+
+        if(!usingbriefCase)
+        {
+            Movement();
+        }
+
+    }
+
+    void Movement()
+    {
+        if (Input.GetButtonDown("Crouch"))
+        {
+            if (isMorph)
+            {
+                if (!isRoof)
+                {
                     //!morphball is just setting scale of player to .5 
                     //and scaling back to full when needed
                     isMorph = false;
-                    transform.localScale = new Vector3(1,1,1);
+                    transform.localScale = new Vector3(1, 1, 1);
                 }
-            } else { 
+            }
+            else
+            {
                 isMorph = true;
-                transform.localScale = new Vector3(1,0.5f,1);
+                transform.localScale = new Vector3(1, 0.5f, 1);
             }
         }
-            //checking if physics checks are active or not
+        //checking if physics checks are active or not
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         isRoof = Physics.CheckSphere(roofChecker.position, roofDistance, roofMask);
 
-        if(isGrounded && velocity.y <0){    //y velocity while grounded is slightly lower than 0 to keep the player grounded
+        if (isGrounded && velocity.y < 0)
+        {    //y velocity while grounded is slightly lower than 0 to keep the player grounded
             velocity.y = -2f;
         }
         float x = Input.GetAxis("Horizontal");  //setting wasd to modifiers for later use
@@ -66,22 +110,26 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         Vector3 verticalMove = transform.right * x + transform.up * z;
 
-        if(isGrounded){     //all jumps and dashes regen while grounded, jumps are instant
+        if (isGrounded)
+        {     //all jumps and dashes regen while grounded, jumps are instant
             jumpsLeft = jumpsMax;
         }
 
-        if(Input.GetButton("Run")){ 
+        if (Input.GetButton("Run"))
+        {
             controller.Move(move * speed * Time.deltaTime * 2);
         }
-        if(Input.GetButtonDown("Jump") && jumpsLeft !=0 && !isMorph){   //jump
+        if (Input.GetButtonDown("Jump") && jumpsLeft != 0 && !isMorph)
+        {   //jump
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityBase);
-            jumpsLeft --;
+            jumpsLeft--;
         }
-        if(isRoof){         //hit a roof and you fall down
+        if (isRoof)
+        {         //hit a roof and you fall down
             velocity.y = (0);
         }
         controller.Move(move * speed * Time.deltaTime);
-        velocity.y +=gravityBase * Time.deltaTime;
+        velocity.y += gravityBase * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 }

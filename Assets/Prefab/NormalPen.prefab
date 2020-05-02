@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7686299547512035485}
   - component: {fileID: 7686299547512035486}
   - component: {fileID: 923926717457427812}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalPen
   m_TagString: Pen
   m_Icon: {fileID: 0}

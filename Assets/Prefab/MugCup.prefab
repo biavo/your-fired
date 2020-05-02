@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 699193707068573946}
   - component: {fileID: 699193707069671994}
   - component: {fileID: 699193707066604628}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MugCup
   m_TagString: Mug
   m_Icon: {fileID: 0}

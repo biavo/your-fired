@@ -15,7 +15,12 @@ public class pointTally : MonoBehaviour
     {
         if(other.GetComponent<BriefCaseItem>())
         {
-            items.Add(other.transform.parent.gameObject);
+            if(!other.GetComponent<BriefCaseItem>().inBriefCase)
+            {
+                other.GetComponent<BriefCaseItem>().inBriefCase = true;
+                items.Add(other.transform.parent.gameObject);
+            }
+            
         }
     }
 
@@ -23,7 +28,11 @@ public class pointTally : MonoBehaviour
     {
         if (other.GetComponent<BriefCaseItem>())
         {
-            items.Remove(other.transform.parent.gameObject);
+            if (other.GetComponent<BriefCaseItem>().inBriefCase)
+            {
+                other.GetComponent<BriefCaseItem>().inBriefCase = false;
+                items.Remove(other.transform.parent.gameObject);
+            }
         }
     }
 

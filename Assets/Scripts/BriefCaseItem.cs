@@ -7,6 +7,7 @@ public class BriefCaseItem : MonoBehaviour
     public int pointValue;
 
     public bool validPlacement = true;
+    public bool inBriefCase = false;
 
     public Material goodMat;
     public Material badMat;

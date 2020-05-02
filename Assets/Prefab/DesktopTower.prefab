@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7327620669858127285}
   - component: {fileID: 7327620669857161077}
   - component: {fileID: 65849371115761418}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DesktopTower
   m_TagString: Computer
   m_Icon: {fileID: 0}

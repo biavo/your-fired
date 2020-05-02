@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2372174884497698717}
   - component: {fileID: 5272854389336674560}
   - component: {fileID: 2382530258616769373}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DeskTopMonitor (5)
   m_TagString: Monitor
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2646403854335690050}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Monitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DeskTopMonitor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594439193006745386, guid: f12dab86ae4f997489fbc5ed45ecd7d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f12dab86ae4f997489fbc5ed45ecd7d3, type: 3}

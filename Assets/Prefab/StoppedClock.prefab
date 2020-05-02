@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1085836249684533113}
   - component: {fileID: 1085836249681633113}
   - component: {fileID: 1085836249682763161}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: StoppedClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
