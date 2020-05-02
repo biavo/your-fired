@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce5b36984178144299b1474aaed3af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 0
+  pointValue: 20
   validPlacement: 1
   goodMat: {fileID: 0}
   badMat: {fileID: 0}

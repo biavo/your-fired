@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ItemMovement : MonoBehaviour
 {
+    public pointTally scoreArea;
     public Camera cam;
     public GameObject selectedItem = null;
 
     public customGrid grid;
 
     public Vector3 startPos;
+    public Vector3 startRot;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +28,7 @@ public class ItemMovement : MonoBehaviour
                 {
                     selectedItem = objectHit.parent.gameObject;
                     startPos = selectedItem.transform.position;
+                    startRot = selectedItem.transform.eulerAngles;
 
                     grid.target = selectedItem.transform.GetChild(0).gameObject;
                     grid.structure = selectedItem.transform.GetChild(1).gameObject;
@@ -71,9 +74,11 @@ public class ItemMovement : MonoBehaviour
             if(!selectedItem.GetComponentInChildren<BriefCaseItem>().validPlacement)
             {
                 selectedItem.transform.position = startPos;
+                selectedItem.transform.eulerAngles = startRot;
             }
             
             selectedItem = null;
+            scoreArea.calculateScore();
         }
     }
 }
