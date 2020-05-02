@@ -9,6 +9,10 @@ TagManager:
   - Stapler
   - Mug
   - Printer
+  - Monitor
+  - Mouse
+  - Keyboard
+  - Computer
   layers:
   - Default
   - TransparentFX

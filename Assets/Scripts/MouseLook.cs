@@ -12,6 +12,10 @@ public class MouseLook : MonoBehaviour
     public int pen;
     public int fancyPen;
     public int mug;
+    public int monitor;
+    public int mouse;
+    public int keyboard;
+    public int computer;
 
     void Update() {
         RaycastHit hit;
@@ -39,6 +43,22 @@ public class MouseLook : MonoBehaviour
                 }
                 if(hit.transform.gameObject.tag == ("Mug")){
                     mug ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Monitor")){
+                    monitor ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Mouse")){
+                    mouse ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Keyboard")){
+                    keyboard ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Computer")){
+                    computer ++;
                     Destroy(hit.transform.gameObject);
                 }
             }
