@@ -16,6 +16,7 @@ TagManager:
   - Laptop
   - Lamp
   - Clock
+  - BriefCaseWall
   layers:
   - Default
   - TransparentFX

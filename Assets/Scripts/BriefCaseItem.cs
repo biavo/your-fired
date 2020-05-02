@@ -13,9 +13,11 @@ public class BriefCaseItem : MonoBehaviour
     //public Material goodMat;
     public Material badMat;
 
+    //public bool grabbable = true;
     void Start()
     {
         ogMat = GetComponent<Renderer>().material;
+        
     }
 
     void OnCollisionStay(Collision collision)

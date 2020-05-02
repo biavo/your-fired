@@ -24,7 +24,7 @@ public class ItemMovement : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Transform objectHit = hit.transform;
-                if(objectHit.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem"))
+                if(objectHit.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem") && objectHit.gameObject.tag != "BriefCaseWall")
                 {
                     selectedItem = objectHit.parent.gameObject;
                     startPos = selectedItem.transform.position;
