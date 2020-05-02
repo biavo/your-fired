@@ -9,10 +9,7 @@ public class ItemMovement : MonoBehaviour
 
     public customGrid grid;
 
-    void Start()
-    {
-        
-    }
+    public Vector3 startPos;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +25,8 @@ public class ItemMovement : MonoBehaviour
                 if(objectHit.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem"))
                 {
                     selectedItem = objectHit.parent.gameObject;
+                    startPos = selectedItem.transform.position;
+
                     grid.target = selectedItem.transform.GetChild(0).gameObject;
                     grid.structure = selectedItem.transform.GetChild(1).gameObject;
                 }
@@ -67,8 +66,13 @@ public class ItemMovement : MonoBehaviour
 
         
 
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && selectedItem)
         {
+            if(!selectedItem.GetComponentInChildren<BriefCaseItem>().validPlacement)
+            {
+                selectedItem.transform.position = startPos;
+            }
+            
             selectedItem = null;
         }
     }
