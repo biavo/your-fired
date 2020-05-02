@@ -16,6 +16,7 @@ public class MouseLook : MonoBehaviour
     public int mouse;
     public int keyboard;
     public int computer;
+    public int laptop;
 
     void Update() {
         RaycastHit hit;
@@ -58,6 +59,10 @@ public class MouseLook : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                 }
                 if(hit.transform.gameObject.tag == ("Computer")){
+                    computer ++;
+                    Destroy(hit.transform.gameObject);
+                }
+                if(hit.transform.gameObject.tag == ("Laptop")){
                     computer ++;
                     Destroy(hit.transform.gameObject);
                 }

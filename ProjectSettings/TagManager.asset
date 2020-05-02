@@ -13,6 +13,7 @@ TagManager:
   - Mouse
   - Keyboard
   - Computer
+  - Laptop
   layers:
   - Default
   - TransparentFX
