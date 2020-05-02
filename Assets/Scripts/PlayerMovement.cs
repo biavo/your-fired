@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject crosshair;
     bool usingbriefCase = false;
 
+    public Animator BriefCaseAnimator;
 
     void Awake(){
             //setting all check objects to their proper place
@@ -48,14 +49,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if(usingbriefCase)
             {
-                usingbriefCase = false;
-                mainCamera.SetActive(true);
-                BriefCase.SetActive(false);
+                StartCoroutine("closeBriefCase");
 
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-
-                crosshair.SetActive(true);
             }
             else
             {
@@ -75,6 +70,22 @@ public class PlayerMovement : MonoBehaviour
             Movement();
         }
 
+    }
+
+    IEnumerator closeBriefCase()
+    {
+        BriefCaseAnimator.Play("Closing");
+        yield return new WaitForSeconds(1f);
+        usingbriefCase = false;
+        mainCamera.SetActive(true);
+        BriefCase.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        crosshair.SetActive(true);
+
+        yield return null;
     }
 
     void Movement()

@@ -39774,6 +39774,11 @@ PrefabInstance:
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 2125179743}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: BriefCaseAnimator
+      value: 
+      objectReference: {fileID: 1711884281}
     - target: {fileID: 5224957522216808947, guid: 803850811fd012c4e87ac813cb7bf687,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50355,6 +50360,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 7.3787103, z: 10.475724}
   m_Center: {x: 0, y: -3.712327e-14, z: 5.2246346}
+--- !u!95 &1711884281 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4933693698248555145, guid: 8feda2f1c8a06ca429684e86ff5d3541,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393309307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1718930183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6365305515096777211, guid: 0d372022f22ef8e4aac0fccc7ab7cd3f,
