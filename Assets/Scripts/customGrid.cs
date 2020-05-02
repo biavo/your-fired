@@ -12,10 +12,14 @@ public class customGrid : MonoBehaviour
     
     void LateUpdate()
     {
-        truePos.x = Mathf.Floor(target.transform.position.x / gridSize) * gridSize;
-        truePos.y = Mathf.Floor(target.transform.position.y / gridSize) * gridSize;
-        truePos.z = Mathf.Floor(target.transform.position.z / gridSize) * gridSize;
+        if(target && structure)
+        {
+            truePos.x = Mathf.Floor(target.transform.position.x / gridSize) * gridSize;
+            truePos.y = Mathf.Floor(target.transform.position.y / gridSize) * gridSize;
+            truePos.z = Mathf.Floor(target.transform.position.z / gridSize) * gridSize;
 
-        structure.transform.position = truePos;
+            structure.transform.position = truePos;
+        }
+
     }
 }

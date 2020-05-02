@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ItemMovement : MonoBehaviour
 {
-    public Camera camera;
+    public Camera cam;
     public GameObject selectedItem = null;
+
+    public customGrid grid;
 
     void Start()
     {
@@ -18,15 +20,45 @@ public class ItemMovement : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
                 Transform objectHit = hit.transform;
-                selectedItem = objectHit.parent.gameObject;
-
-                // Do something with the object that was hit by the raycast.
+                if(objectHit.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem"))
+                {
+                    selectedItem = objectHit.parent.gameObject;
+                    grid.target = selectedItem.transform.GetChild(0).gameObject;
+                    grid.structure = selectedItem.transform.GetChild(1).gameObject;
+                }
+                else
+                {
+                    selectedItem = null;    
+                }
             }
+            else
+            {
+                selectedItem = null;
+            }
+        }
+
+        if(Input.GetMouseButton(0) && selectedItem)
+        {
+            //move the item around
+            //new raycast that ignores briefcaseitems....
+            RaycastHit hit;
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.NameToLayer("BriefCase")))
+            {
+                //item position is at hit position?
+                selectedItem.transform.position = hit.point;
+            }
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            selectedItem = null;
         }
     }
 }
