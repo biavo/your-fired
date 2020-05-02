@@ -15,7 +15,10 @@ public class customGrid : MonoBehaviour
         if(target && structure)
         {
             truePos.x = Mathf.Floor(target.transform.position.x / gridSize) * gridSize;
-            truePos.y = Mathf.Floor(target.transform.position.y / gridSize) * gridSize;
+            //truePos.y = Mathf.Floor(target.transform.position.y / gridSize) * gridSize;
+            //not locking y on axis:
+
+            truePos.y = target.transform.position.y;
             truePos.z = Mathf.Floor(target.transform.position.z / gridSize) * gridSize;
 
             structure.transform.position = truePos;

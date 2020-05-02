@@ -52,9 +52,20 @@ public class ItemMovement : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.NameToLayer("BriefCase")))
             {
                 //item position is at hit position?
-                selectedItem.transform.position = hit.point;
+                var pos = new Vector3(hit.point.x, hit.point.y + selectedItem.transform.GetChild(1).localScale.y / 2, hit.point.z);
+                selectedItem.transform.position = pos;
+                
+            }
+
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                //selectedItem.transform.rotation = Quaternion.Euler(selectedItem.transform.rotation.x, selectedItem.transform.rotation.y + 90, selectedItem.transform.rotation.z);
+                var rot = selectedItem.transform.rotation;
+                selectedItem.transform.rotation = rot * Quaternion.Euler(0, 90, 0);
             }
         }
+
+        
 
         if(Input.GetMouseButtonUp(0))
         {
