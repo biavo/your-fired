@@ -26,6 +26,9 @@ TagManager:
   - Bottle
   - BossPlate
   - Canvas
+  - Beaver
+  - GoldBeaver
+  - GoldSmartPhone
   layers:
   - Default
   - TransparentFX

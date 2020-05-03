@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9044994688879250041
+--- !u!1 &5015048238634332079
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9044994688879613529}
-  - component: {fileID: 9044994688876189305}
-  - component: {fileID: 9044994688877319353}
-  - component: {fileID: 64467920455336512}
+  - component: {fileID: 5015048238633907087}
+  - component: {fileID: 5015048238631007151}
+  - component: {fileID: 5015048238632137071}
+  - component: {fileID: 6106559959757574637}
   m_Layer: 12
-  m_Name: BeaverStatue DeskSize
-  m_TagString: Beaver
+  m_Name: GoldPhone
+  m_TagString: GoldSmartPhone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9044994688879613529
+--- !u!4 &5015048238633907087
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044994688879250041}
-  m_LocalRotation: {x: 0.13935338, y: -0.6932393, z: -0.6932393, w: -0.13935338}
-  m_LocalPosition: {x: -101.81, y: 4.053, z: -21.07}
-  m_LocalScale: {x: 0.2943, y: 0.2943, z: 0.2943}
+  m_GameObject: {fileID: 5015048238634332079}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -35.6592, y: 3.0471852, z: -118.949295}
+  m_LocalScale: {x: 0.1770627, y: 0.1770627, z: 0.1770627}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -202.732}
---- !u!33 &9044994688876189305
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5015048238631007151
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044994688879250041}
-  m_Mesh: {fileID: 4300000, guid: e5ccbe875c8bc0041b24c7f329d58800, type: 3}
---- !u!23 &9044994688877319353
+  m_GameObject: {fileID: 5015048238634332079}
+  m_Mesh: {fileID: 4300000, guid: 6e20f798d6984884ca19aa913df84795, type: 3}
+--- !u!23 &5015048238632137071
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044994688879250041}
+  m_GameObject: {fileID: 5015048238634332079}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5ccbe875c8bc0041b24c7f329d58800, type: 3}
+  - {fileID: 2100000, guid: ffe8b4135e29d384cb333382728c759a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,17 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64467920455336512
-MeshCollider:
+--- !u!65 &6106559959757574637
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044994688879250041}
+  m_GameObject: {fileID: 5015048238634332079}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: e5ccbe875c8bc0041b24c7f329d58800, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.1201096, y: 4.6569395, z: 0.35915035}
+  m_Center: {x: -0.0017156601, y: -0.1313939, z: 0}
