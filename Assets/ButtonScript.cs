@@ -338,7 +338,7 @@ public class ButtonScript : MonoBehaviour
 
     public void EndGame()
     {
-        HighScoreText.text = "SCORE $" + currentScore;
+        scoreText.text = "SCORE $" + currentScore;
         SetHighScore(currentScore);
         prepareAchievementsText();
         Save();
