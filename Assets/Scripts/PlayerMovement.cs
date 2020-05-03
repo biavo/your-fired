@@ -133,10 +133,10 @@ public class PlayerMovement : MonoBehaviour
             jumpsLeft = jumpsMax;
         }
 
-        if (Input.GetButton("Run"))
-        {
-            controller.Move(move * speed * Time.deltaTime * 2);
-        }
+        //if (Input.GetButton("Run"))
+        //{
+        //    controller.Move(move * speed * Time.deltaTime * 2);
+        //}
         if (Input.GetButtonDown("Jump") && jumpsLeft != 0 && !isMorph/* && !usingbriefCase*/)
         {   //jump
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityBase);
