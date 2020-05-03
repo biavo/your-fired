@@ -20,6 +20,8 @@ public class ButtonScript : MonoBehaviour
 
     public GameObject AchievementsScreen;
 
+    public GameObject OptionsScreen;
+
     public float timer;
     bool timerStarted = false;
     public TextMeshProUGUI timerText;
@@ -302,7 +304,37 @@ public class ButtonScript : MonoBehaviour
         }
     }
 
+    public void OptionsBtnFromPause()
+    {
+        OptionsScreen.SetActive(true);
+        PauseMenu.SetActive(false);
+    }
 
+    //public void OptionsBackBtnFromPause()
+    //{
+    //    OptionsScreen.SetActive(false);
+    //    PauseMenu.SetActive(true);
+    //}
+
+    public void OptionsBtn()
+    {
+        OptionsScreen.SetActive(true);
+        StartMenu.SetActive(false);
+    }
+
+    public void OptionsBackBtn()
+    {
+        OptionsScreen.SetActive(false);
+
+        if(paused)
+        {
+            PauseMenu.SetActive(true);
+        }
+        else
+        {
+            StartMenu.SetActive(true);
+        }
+    }
 
     public void AchievementsBtn()
     {
