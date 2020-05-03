@@ -5,6 +5,7 @@ using UnityEngine;
 public class BriefCaseItem : MonoBehaviour
 {
     public int pointValue;
+    public bool golden;
 
     public bool validPlacement = true;
     public bool inBriefCase = false;

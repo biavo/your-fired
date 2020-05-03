@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8410947137756990292}
   - component: {fileID: 9156942209155893304}
   - component: {fileID: 6886690788842581264}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BossNamePlate
-  m_TagString: Untagged
+  m_TagString: BossPlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

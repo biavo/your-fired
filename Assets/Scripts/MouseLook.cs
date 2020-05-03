@@ -15,9 +15,11 @@ public class MouseLook : MonoBehaviour
     public Transform spawnPos2;
 
     public Animator ArmAnimator;
-
+    public int itemsStolenCount;
+    public ButtonScript mainButtonScript;
     void Start()
     {
+        mainButtonScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<ButtonScript>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -54,6 +56,8 @@ public class MouseLook : MonoBehaviour
                 {
                     ArmAnimator.Play("Swipe");
                     Destroy(hit.transform.gameObject);
+                    itemsStolenCount += 1;
+                    mainButtonScript.setItemsStolenGameUI(itemsStolenCount);
                     spawnItem(hit);
                 }
             }

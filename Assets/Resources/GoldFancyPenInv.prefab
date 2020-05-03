@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 800
+  golden: 1
   validPlacement: 1
   inBriefCase: 0
   ogMat: {fileID: 0}

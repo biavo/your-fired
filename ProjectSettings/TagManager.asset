@@ -24,6 +24,8 @@ TagManager:
   - SmallPlant
   - BrownBag
   - Bottle
+  - BossPlate
+  - Canvas
   layers:
   - Default
   - TransparentFX

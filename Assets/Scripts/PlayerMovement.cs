@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isGrounded)
+        if(Input.GetKeyDown(KeyCode.E) && isGrounded && !isMorph)
         {
             if(usingbriefCase)
             {
