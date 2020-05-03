@@ -14605,6 +14605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VentGrate
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b8c496f4559387e418b863e16274c937, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b8c496f4559387e418b863e16274c937, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.718132
@@ -14651,6 +14655,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8c496f4559387e418b863e16274c937, type: 3}
+--- !u!1 &444719286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b8c496f4559387e418b863e16274c937,
+    type: 3}
+  m_PrefabInstance: {fileID: 444719285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &444719287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444719286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0919209, y: 0.17491965, z: 2.0919209}
+  m_Center: {x: 0, y: 0.0000019073486, z: 0}
 --- !u!1001 &447077234
 PrefabInstance:
   m_ObjectHideFlags: 0
