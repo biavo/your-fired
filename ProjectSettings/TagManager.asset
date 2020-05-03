@@ -21,6 +21,7 @@ TagManager:
   - GoldMug
   - GoldFancyPen
   - SmartPhone
+  - SmallPlant
   layers:
   - Default
   - TransparentFX
