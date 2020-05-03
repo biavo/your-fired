@@ -34,7 +34,7 @@ public class pointTally : MonoBehaviour
                 if(other.name == "NormalPen")
                 {
                     pens += 1;
-                    if(pens >= 50)
+                    if(pens >= 30)
                     {
                         mainButtonScript.SetAch50Pens();
                     }

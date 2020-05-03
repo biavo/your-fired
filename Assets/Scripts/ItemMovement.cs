@@ -32,8 +32,8 @@ public class ItemMovement : MonoBehaviour
                     startPos = selectedItem.transform.position;
                     startRot = selectedItem.transform.eulerAngles;
 
-                    grid.target = selectedItem.transform.GetChild(0).gameObject;
-                    grid.structure = selectedItem.transform.GetChild(1).gameObject;
+                    //grid.target = selectedItem.transform.GetChild(0).gameObject;
+                    //grid.structure = selectedItem.transform.GetChild(1).gameObject;
                 }
                 else
                 {

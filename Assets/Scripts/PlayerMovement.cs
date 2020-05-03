@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(!usingbriefCase)
+        if (!usingbriefCase)
         {
             Movement();
         }
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
-        if (Input.GetButtonDown("Crouch"))
+        if (Input.GetButtonDown("Crouch")/* && !usingbriefCase*/)
         {
             if (isMorph)
             {
@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.Move(move * speed * Time.deltaTime * 2);
         }
-        if (Input.GetButtonDown("Jump") && jumpsLeft != 0 && !isMorph)
+        if (Input.GetButtonDown("Jump") && jumpsLeft != 0 && !isMorph/* && !usingbriefCase*/)
         {   //jump
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityBase);
             jumpsLeft--;
