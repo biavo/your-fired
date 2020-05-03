@@ -18,6 +18,8 @@ TagManager:
   - Clock
   - BriefCaseWall
   - GoldStapler
+  - GoldMug
+  - GoldFancyPen
   layers:
   - Default
   - TransparentFX
