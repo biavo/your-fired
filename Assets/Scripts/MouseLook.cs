@@ -14,6 +14,8 @@ public class MouseLook : MonoBehaviour
     public Transform spawnPos1;
     public Transform spawnPos2;
 
+    public Animator ArmAnimator;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -50,6 +52,7 @@ public class MouseLook : MonoBehaviour
             {
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Item"))
                 {
+                    ArmAnimator.Play("Swipe");
                     Destroy(hit.transform.gameObject);
                     spawnItem(hit);
                 }
