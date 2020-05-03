@@ -1,0 +1,370 @@
+fileFormatVersion: 2
+guid: d73f4f3703dec3b438ce417b708d428b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: BusinessmanArm
+    100004: Head
+    100006: Head_end
+    100008: IK Pin Lower Torso (Mark)
+    100010: Left Ankle
+    100012: Left Boob Bone
+    100014: Left Boob Bone_end
+    100016: Left Hip
+    100018: Left IK Pin Elbow
+    100020: Left IK Pin Elbow_end
+    100022: Left IK Pin Heel
+    100024: Left IK Pin Heel_end
+    100026: Left IK Pin Knee
+    100028: Left IK Pin Knee_end
+    100030: Left IK Pin Wrist
+    100032: Left IK Pin Wrist_end
+    100034: Left Lower Arm
+    100036: Left Middle 1
+    100038: Left Middle 2
+    100040: Left Middle 3
+    100042: Left Middle 3.001
+    100044: Left Middle 3.001_end
+    100046: Left Middle 3.002
+    100048: Left Middle 3.002_end
+    100050: Left Middle 3_end
+    100052: Left Pinky 1
+    100054: Left Pinky 2
+    100056: Left Pinky 3
+    100058: Left Pinky 3.001
+    100060: Left Pinky 3.001_end
+    100062: Left Pinky 4
+    100064: Left Pinky 4.001
+    100066: Left Pinky 4.001_end
+    100068: Left Pinky 4.002
+    100070: Left Pinky 4.002_end
+    100072: Left Pinky 4_end
+    100074: Left Pointer 1
+    100076: Left Pointer 2
+    100078: Left Pointer 3
+    100080: Left Pointer 3.001
+    100082: Left Pointer 3.001_end
+    100084: Left Pointer 3.002
+    100086: Left Pointer 3.002_end
+    100088: Left Pointer 3_end
+    100090: Left Ring 1
+    100092: Left Ring 2
+    100094: Left Ring 3
+    100096: Left Ring 3.001
+    100098: Left Ring 3.001_end
+    100100: Left Ring 3.002
+    100102: Left Ring 3.002_end
+    100104: Left Ring 3_end
+    100106: Left Shin
+    100108: Left Shoulder
+    100110: Left Thigh
+    100112: Left Thumb 1
+    100114: Left Thumb 2
+    100116: Left Thumb 2.001
+    100118: Left Thumb 2.001_end
+    100120: Left Thumb 3
+    100122: Left Thumb 3.001
+    100124: Left Thumb 3.001_end
+    100126: Left Thumb 3_end
+    100128: Left Toes
+    100130: Left Toes_end
+    100132: Left Upper Arm
+    100134: Left Wrist
+    100136: Lower Torso
+    100138: Middle Torso
+    100140: Neck
+    100142: Right Ankle
+    100144: Right Boob Bone
+    100146: Right Boob Bone_end
+    100148: Right Hip
+    100150: Right IK Pin Elbow
+    100152: Right IK Pin Elbow_end
+    100154: Right IK Pin Heel
+    100156: Right IK Pin Heel_end
+    100158: Right IK Pin Knee
+    100160: Right IK Pin Knee_end
+    100162: Right IK Pin Wrist
+    100164: Right IK Pin Wrist_end
+    100166: Right Lower Arm
+    100168: Right Middle 1
+    100170: Right Middle 2
+    100172: Right Middle 3
+    100174: Right Middle 3.001
+    100176: Right Middle 3.001_end
+    100178: Right Middle 3.002
+    100180: Right Middle 3.002_end
+    100182: Right Middle 3_end
+    100184: Right Pinky 1
+    100186: Right Pinky 2
+    100188: Right Pinky 3
+    100190: Right Pinky 3.001
+    100192: Right Pinky 3.001_end
+    100194: Right Pinky 4
+    100196: Right Pinky 4.001
+    100198: Right Pinky 4.001_end
+    100200: Right Pinky 4.002
+    100202: Right Pinky 4.002_end
+    100204: Right Pinky 4_end
+    100206: Right Pointer 1
+    100208: Right Pointer 2
+    100210: Right Pointer 3
+    100212: Right Pointer 3.001
+    100214: Right Pointer 3.001_end
+    100216: Right Pointer 3.002
+    100218: Right Pointer 3.002_end
+    100220: Right Pointer 3_end
+    100222: Right Ring 1
+    100224: Right Ring 2
+    100226: Right Ring 3
+    100228: Right Ring 3.001
+    100230: Right Ring 3.001_end
+    100232: Right Ring 3.002
+    100234: Right Ring 3.002_end
+    100236: Right Ring 3_end
+    100238: Right Shin
+    100240: Right Shoulder
+    100242: Right Thigh
+    100244: Right Thumb 1
+    100246: Right Thumb 2
+    100248: Right Thumb 2.001
+    100250: Right Thumb 2.001_end
+    100252: Right Thumb 3
+    100254: Right Thumb 3.001
+    100256: Right Thumb 3.001_end
+    100258: Right Thumb 3_end
+    100260: Right Toes
+    100262: Right Toes_end
+    100264: Right Upper Arm
+    100266: Right Wrist
+    100268: Skeleton
+    100270: Upper Torso
+    400000: //RootNode
+    400002: BusinessmanArm
+    400004: Head
+    400006: Head_end
+    400008: IK Pin Lower Torso (Mark)
+    400010: Left Ankle
+    400012: Left Boob Bone
+    400014: Left Boob Bone_end
+    400016: Left Hip
+    400018: Left IK Pin Elbow
+    400020: Left IK Pin Elbow_end
+    400022: Left IK Pin Heel
+    400024: Left IK Pin Heel_end
+    400026: Left IK Pin Knee
+    400028: Left IK Pin Knee_end
+    400030: Left IK Pin Wrist
+    400032: Left IK Pin Wrist_end
+    400034: Left Lower Arm
+    400036: Left Middle 1
+    400038: Left Middle 2
+    400040: Left Middle 3
+    400042: Left Middle 3.001
+    400044: Left Middle 3.001_end
+    400046: Left Middle 3.002
+    400048: Left Middle 3.002_end
+    400050: Left Middle 3_end
+    400052: Left Pinky 1
+    400054: Left Pinky 2
+    400056: Left Pinky 3
+    400058: Left Pinky 3.001
+    400060: Left Pinky 3.001_end
+    400062: Left Pinky 4
+    400064: Left Pinky 4.001
+    400066: Left Pinky 4.001_end
+    400068: Left Pinky 4.002
+    400070: Left Pinky 4.002_end
+    400072: Left Pinky 4_end
+    400074: Left Pointer 1
+    400076: Left Pointer 2
+    400078: Left Pointer 3
+    400080: Left Pointer 3.001
+    400082: Left Pointer 3.001_end
+    400084: Left Pointer 3.002
+    400086: Left Pointer 3.002_end
+    400088: Left Pointer 3_end
+    400090: Left Ring 1
+    400092: Left Ring 2
+    400094: Left Ring 3
+    400096: Left Ring 3.001
+    400098: Left Ring 3.001_end
+    400100: Left Ring 3.002
+    400102: Left Ring 3.002_end
+    400104: Left Ring 3_end
+    400106: Left Shin
+    400108: Left Shoulder
+    400110: Left Thigh
+    400112: Left Thumb 1
+    400114: Left Thumb 2
+    400116: Left Thumb 2.001
+    400118: Left Thumb 2.001_end
+    400120: Left Thumb 3
+    400122: Left Thumb 3.001
+    400124: Left Thumb 3.001_end
+    400126: Left Thumb 3_end
+    400128: Left Toes
+    400130: Left Toes_end
+    400132: Left Upper Arm
+    400134: Left Wrist
+    400136: Lower Torso
+    400138: Middle Torso
+    400140: Neck
+    400142: Right Ankle
+    400144: Right Boob Bone
+    400146: Right Boob Bone_end
+    400148: Right Hip
+    400150: Right IK Pin Elbow
+    400152: Right IK Pin Elbow_end
+    400154: Right IK Pin Heel
+    400156: Right IK Pin Heel_end
+    400158: Right IK Pin Knee
+    400160: Right IK Pin Knee_end
+    400162: Right IK Pin Wrist
+    400164: Right IK Pin Wrist_end
+    400166: Right Lower Arm
+    400168: Right Middle 1
+    400170: Right Middle 2
+    400172: Right Middle 3
+    400174: Right Middle 3.001
+    400176: Right Middle 3.001_end
+    400178: Right Middle 3.002
+    400180: Right Middle 3.002_end
+    400182: Right Middle 3_end
+    400184: Right Pinky 1
+    400186: Right Pinky 2
+    400188: Right Pinky 3
+    400190: Right Pinky 3.001
+    400192: Right Pinky 3.001_end
+    400194: Right Pinky 4
+    400196: Right Pinky 4.001
+    400198: Right Pinky 4.001_end
+    400200: Right Pinky 4.002
+    400202: Right Pinky 4.002_end
+    400204: Right Pinky 4_end
+    400206: Right Pointer 1
+    400208: Right Pointer 2
+    400210: Right Pointer 3
+    400212: Right Pointer 3.001
+    400214: Right Pointer 3.001_end
+    400216: Right Pointer 3.002
+    400218: Right Pointer 3.002_end
+    400220: Right Pointer 3_end
+    400222: Right Ring 1
+    400224: Right Ring 2
+    400226: Right Ring 3
+    400228: Right Ring 3.001
+    400230: Right Ring 3.001_end
+    400232: Right Ring 3.002
+    400234: Right Ring 3.002_end
+    400236: Right Ring 3_end
+    400238: Right Shin
+    400240: Right Shoulder
+    400242: Right Thigh
+    400244: Right Thumb 1
+    400246: Right Thumb 2
+    400248: Right Thumb 2.001
+    400250: Right Thumb 2.001_end
+    400252: Right Thumb 3
+    400254: Right Thumb 3.001
+    400256: Right Thumb 3.001_end
+    400258: Right Thumb 3_end
+    400260: Right Toes
+    400262: Right Toes_end
+    400264: Right Upper Arm
+    400266: Right Wrist
+    400268: Skeleton
+    400270: Upper Torso
+    2100000: BusinessmanArmMaterial
+    4300000: BusinessmanArm
+    7400000: Skeleton|BusinessmanArmAction
+    7400002: Skeleton|BusinessmanArmIdle
+    7400004: Skeleton|BusinessmanArmSwipe
+    9500000: //RootNode
+    13700000: BusinessmanArm
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
