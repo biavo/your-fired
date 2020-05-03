@@ -1619,6 +1619,9 @@ GameObject:
   - component: {fileID: 232746203}
   - component: {fileID: 232746202}
   - component: {fileID: 232746204}
+  - component: {fileID: 232746207}
+  - component: {fileID: 232746206}
+  - component: {fileID: 232746205}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -1723,7 +1726,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 232746196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09aff66566cf6984ea15954d33aa3451, type: 3}
+  m_Script: {fileID: 11500000, guid: b15b5f8471863ad4bbc270b0251e1b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StartMenu: {fileID: 401469536}
@@ -1750,6 +1753,9 @@ MonoBehaviour:
   Ach50PensText: {fileID: 349161487}
   StartMenuMusic: {fileID: 232746203}
   GameMusic: {fileID: 232746202}
+  MenuSelectSound: {fileID: 232746207}
+  PauseMenuOpenSound: {fileID: 232746205}
+  PauseMenuCloseSound: {fileID: 232746206}
 --- !u!114 &232746202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1810,6 +1816,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicSlider: {fileID: 1245055150}
   SFXSlider: {fileID: 666677076}
+--- !u!114 &232746205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232746196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/PauseMenu_Open
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &232746206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232746196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/PauseMenu_Close
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &232746207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232746196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/MenuSelect
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &246392764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6802,6 +6877,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 232746201}
         m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232746201}
+        m_MethodName: playClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
