@@ -13,6 +13,8 @@ public class ItemMovement : MonoBehaviour
     public Vector3 startPos;
     public Vector3 startRot;
 
+    //public LayerMask cullingMask;
+
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +23,7 @@ public class ItemMovement : MonoBehaviour
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit/*, cullingMask*/))
             {
                 Transform objectHit = hit.transform;
                 if(objectHit.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem") && objectHit.gameObject.tag != "BriefCaseWall")

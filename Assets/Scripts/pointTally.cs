@@ -15,7 +15,7 @@ public class pointTally : MonoBehaviour
     {
         if(other.GetComponent<BriefCaseItem>())
         {
-            if(!other.GetComponent<BriefCaseItem>().inBriefCase && other.GetComponent<BriefCaseItem>().validPlacement)
+            if(!other.GetComponent<BriefCaseItem>().inBriefCase/* && other.GetComponent<BriefCaseItem>().validPlacement*/)
             {
                 other.GetComponent<BriefCaseItem>().inBriefCase = true;
                 items.Add(other.transform.parent.gameObject);
