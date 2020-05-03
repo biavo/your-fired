@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4513570276377519908}
   - component: {fileID: 4513570276376520164}
   - component: {fileID: 3186066877707822737}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BrownBag
-  m_TagString: Untagged
+  m_TagString: BrownBag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

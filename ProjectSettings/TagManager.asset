@@ -22,6 +22,8 @@ TagManager:
   - GoldFancyPen
   - SmartPhone
   - SmallPlant
+  - BrownBag
+  - Bottle
   layers:
   - Default
   - TransparentFX
