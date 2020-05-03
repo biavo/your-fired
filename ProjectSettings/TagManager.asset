@@ -20,6 +20,7 @@ TagManager:
   - GoldStapler
   - GoldMug
   - GoldFancyPen
+  - SmartPhone
   layers:
   - Default
   - TransparentFX
