@@ -49317,6 +49317,41 @@ PrefabInstance:
       propertyPath: BriefCaseAnimator
       value: 
       objectReference: {fileID: 1711884281}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: Briefcase_Close
+      value: 
+      objectReference: {fileID: 1346492602}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: Briefcase_Open
+      value: 
+      objectReference: {fileID: 1346492601}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: Jump
+      value: 
+      objectReference: {fileID: 1346492600}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: Walking
+      value: 
+      objectReference: {fileID: 1346492599}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: WalkingSound
+      value: 
+      objectReference: {fileID: 1346492599}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: JumpSound
+      value: 
+      objectReference: {fileID: 1346492600}
+    - target: {fileID: 5224957522216808945, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: walkTimerDelay
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5224957522216808947, guid: 803850811fd012c4e87ac813cb7bf687,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49402,8 +49437,209 @@ PrefabInstance:
       propertyPath: ArmAnimator
       value: 
       objectReference: {fileID: 328527830}
+    - target: {fileID: 9074848400644406199, guid: 803850811fd012c4e87ac813cb7bf687,
+        type: 3}
+      propertyPath: ItemStolenSound
+      value: 
+      objectReference: {fileID: 1346492604}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803850811fd012c4e87ac813cb7bf687, type: 3}
+--- !u!1 &1346492598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5224957522216808944, guid: 803850811fd012c4e87ac813cb7bf687,
+    type: 3}
+  m_PrefabInstance: {fileID: 1346492597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1346492599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Walking
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1346492600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Jump
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1346492601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Briefcase_Open
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1346492602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Briefcase_Close
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!1 &1346492603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5224957521114374225, guid: 803850811fd012c4e87ac813cb7bf687,
+    type: 3}
+  m_PrefabInstance: {fileID: 1346492597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1346492604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Item_Pickup
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1346492605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Item_PlaceInBriefcase
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1346492606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Item_Remove
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1346492607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346492598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Item_Select
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1351997732
 GameObject:
   m_ObjectHideFlags: 0
@@ -51204,6 +51440,21 @@ PrefabInstance:
       propertyPath: cullingMask.m_Bits
       value: 11542
       objectReference: {fileID: 0}
+    - target: {fileID: 8716508687446303144, guid: 8feda2f1c8a06ca429684e86ff5d3541,
+        type: 3}
+      propertyPath: PlaceInBriefCaseSound
+      value: 
+      objectReference: {fileID: 1346492605}
+    - target: {fileID: 8716508687446303144, guid: 8feda2f1c8a06ca429684e86ff5d3541,
+        type: 3}
+      propertyPath: ItemDestroySound
+      value: 
+      objectReference: {fileID: 1346492606}
+    - target: {fileID: 8716508687446303144, guid: 8feda2f1c8a06ca429684e86ff5d3541,
+        type: 3}
+      propertyPath: ItemSelectSound
+      value: 
+      objectReference: {fileID: 1346492607}
     - target: {fileID: 8716508688248742182, guid: 8feda2f1c8a06ca429684e86ff5d3541,
         type: 3}
       propertyPath: gridSize

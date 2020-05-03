@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using FMODUnity;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -48,6 +49,9 @@ public class ButtonScript : MonoBehaviour
     public TextMeshProUGUI AchScore3000Text;
     public TextMeshProUGUI AchScore5000Text;
     public TextMeshProUGUI Ach50PensText;
+
+    public StudioEventEmitter StartMenuMusic;
+    public StudioEventEmitter GameMusic;
 
     void Save()
     {
@@ -314,6 +318,8 @@ public class ButtonScript : MonoBehaviour
 
     public void PlayBtn1()
     {
+        Crosshair.SetActive(true);
+        SceneManager.LoadScene("Office1");
         StartMenu.SetActive(false);
         InstructionsScreen1.SetActive(true);
     }
@@ -328,12 +334,16 @@ public class ButtonScript : MonoBehaviour
     {
         //Load the game... how to do tutorial??
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Office1");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         InstructionsScreen2.SetActive(false);
         GameUI.SetActive(true);
-        Crosshair.SetActive(true);
+        //Crosshair.SetActive(true);
         timer = 300;
         timerStarted = true;
+
+        StartMenuMusic.Stop();
+        GameMusic.Play();
     }
 
     public void EndGame()
@@ -351,6 +361,9 @@ public class ButtonScript : MonoBehaviour
         PauseMenu.SetActive(false);
         EndScreen.SetActive(true);
         paused = false;
+
+        StartMenuMusic.Play();
+        GameMusic.Stop();
     }
 
     public void QuitToMenu()

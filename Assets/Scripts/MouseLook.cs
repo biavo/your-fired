@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using FMODUnity;
 
 public class MouseLook : MonoBehaviour
 {
@@ -17,11 +17,14 @@ public class MouseLook : MonoBehaviour
     public Animator ArmAnimator;
     public int itemsStolenCount;
     public ButtonScript mainButtonScript;
+
+    public StudioEventEmitter ItemStolenSound;
+
     void Start()
     {
         mainButtonScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<ButtonScript>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     void spawnItem(RaycastHit hit)
@@ -54,6 +57,7 @@ public class MouseLook : MonoBehaviour
             {
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Item"))
                 {
+                    ItemStolenSound.Play();
                     ArmAnimator.Play("Swipe");
                     Destroy(hit.transform.gameObject);
                     itemsStolenCount += 1;

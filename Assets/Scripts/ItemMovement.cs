@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class ItemMovement : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class ItemMovement : MonoBehaviour
 
     public Vector3 startPos;
     public Vector3 startRot;
+
+    public StudioEventEmitter PlaceInBriefCaseSound;
+    public StudioEventEmitter ItemSelectSound;
+    public StudioEventEmitter ItemDestroySound;
 
     //public LayerMask cullingMask;
 
@@ -28,6 +33,7 @@ public class ItemMovement : MonoBehaviour
                 Transform objectHit = hit.transform;
                 if(objectHit.gameObject.layer == LayerMask.NameToLayer("BriefCaseItem") && objectHit.gameObject.tag != "BriefCaseWall")
                 {
+                    ItemSelectSound.Play();
                     selectedItem = objectHit.parent.gameObject;
                     startPos = selectedItem.transform.position;
                     startRot = selectedItem.transform.eulerAngles;
@@ -71,6 +77,7 @@ public class ItemMovement : MonoBehaviour
 
         if(Input.GetMouseButtonDown(1) && selectedItem)
         {
+            ItemDestroySound.Play();
             scoreArea.items.Remove(selectedItem);
             Destroy(selectedItem);
             selectedItem = null;
@@ -89,6 +96,7 @@ public class ItemMovement : MonoBehaviour
             }
             else
             {
+                PlaceInBriefCaseSound.Play();
                 scoreArea.calculateScore();
             }
             

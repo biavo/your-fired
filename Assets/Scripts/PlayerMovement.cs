@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using FMODUnity;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
@@ -35,6 +35,14 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator BriefCaseAnimator;
 
+    public StudioEventEmitter Briefcase_Close;
+    public StudioEventEmitter Briefcase_Open;
+    public StudioEventEmitter JumpSound;
+    public StudioEventEmitter WalkingSound;
+
+    public float walkTimerDelay;
+    float walkTimer;
+
     void Awake(){
             //setting all check objects to their proper place
         groundCheck = GameObject.Find("GroundCheck").transform;
@@ -46,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         crosshair = GameObject.Find("Crosshair");
+        
     }
 
     void Update()
@@ -68,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
                 //GameObject.Find("Crosshair").SetActive(false);
                 crosshair.SetActive(false);
+                Briefcase_Open.Play();
             }
         }
 
@@ -81,7 +91,9 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator closeBriefCase()
     {
         BriefCaseAnimator.Play("Closing");
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(0.05f);
+        Briefcase_Close.Play();
+        yield return new WaitForSeconds(0.95f);
         usingbriefCase = false;
         mainCamera.SetActive(true);
         BriefCase.SetActive(false);
@@ -91,6 +103,8 @@ public class PlayerMovement : MonoBehaviour
 
         //GameObject.Find("Crosshair").SetActive(true);
         crosshair.SetActive(true);
+
+        
 
         yield return null;
     }
@@ -128,6 +142,16 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         Vector3 verticalMove = transform.right * x + transform.up * z;
 
+        if(x >= 0.1f || z >= 0.1f && isGrounded)
+        {
+            if(walkTimer <= 0)
+            {
+                WalkingSound.Play();
+                walkTimer = walkTimerDelay;
+            }
+            walkTimer -= Time.deltaTime;
+        }
+
         if (isGrounded)
         {     //all jumps and dashes regen while grounded, jumps are instant
             jumpsLeft = jumpsMax;
@@ -139,6 +163,8 @@ public class PlayerMovement : MonoBehaviour
         //}
         if (Input.GetButtonDown("Jump") && jumpsLeft != 0 && !isMorph/* && !usingbriefCase*/)
         {   //jump
+            walkTimer = walkTimerDelay;
+            JumpSound.Play();
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravityBase);
             jumpsLeft--;
         }
